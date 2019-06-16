@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><menu xmlns="http://asta.ir/core/portal/menu/menuparser" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" host="/portal/index#/wmptest/" prefix="wmptest.">
+	<tab activity-codes="" id="root" title="wmptest">
+		<menu-group activity-codes="" id="wmptest-menugroup" title="Sample Menu" url="">
+			<menu-item activity-codes="" icon="" id="wmptest-menuitem1" title="Index Page" url="/index.jsp"/>
+		</menu-group>
+	<menu-item activity-codes="wmptest.blogpost.list" id="blogPostList" title="لیست پست های وبلاگ" url="blogpost/list"/>
+  <menu-item activity-codes="wmptest.car.list" id="carList" title="لیست خودرو ها" url="car/list"/>
+  <menu-item activity-codes="wmptest.company.list" id="companyList" title="لیست شرکت ها" url="company/list"/>
+  <menu-item activity-codes="wmptest.criticalinfo.list" id="criticalInfoList" title="لیست داده های حیاتی" url="criticalinfo/list"/>
+  <menu-item activity-codes="wmptest.employee.list" id="employeeList" title="لیست کارمند ها" url="employee/list"/>
+  <menu-item activity-codes="wmptest.engine.list" id="engineList" title="لیست موتور ها" url="engine/list"/>
+  <menu-item activity-codes="wmptest.fieldvalidation.list" id="fieldValidationList" title="لیست ولیدیشن ها" url="fieldvalidation/list"/>
+  <menu-item activity-codes="wmptest.filecontainer.list" id="fileContainerList" title="لیست نگهدارندگان فایل" url="filecontainer/list"/>
+  <menu-item activity-codes="wmptest.home.list" id="homeList" title="لیست خانه ها" url="home/list"/>
+  <menu-item activity-codes="wmptest.kitchen.list" id="kitchenList" title="لیست آشپزخانه ها" url="kitchen/list"/>
+  <menu-item activity-codes="wmptest.message.list" id="messageList" title="لیست پیام ها" url="message/list"/>
+  <menu-item activity-codes="wmptest.messagetype.list" id="messageTypeList" title="لیست انوع پیام" url="messagetype/list"/>
+  <menu-item activity-codes="wmptest.school.list" id="schoolList" title="لیست مدارس" url="school/list"/>
+  <menu-item activity-codes="wmptest.stringidentifier.list" id="stringIdentifierList" title="لیست موجودیت ها با id رشته ای" url="stringidentifier/list"/>
+  <menu-item activity-codes="wmptest.student.list" id="studentList" title="لیست دانش آموزان" url="student/list"/>
+  <menu-item activity-codes="wmptest.tag.list" id="tagList" title="لیست تگ ها" url="tag/list"/>
+  <menu-item activity-codes="wmptest.task.list" id="taskList" title="لیست تسک ها" url="task/list"/>
+  <menu-item activity-codes="wmptest.teacher.list" id="teacherList" title="لیست معلم ها" url="teacher/list"/>
+  </tab>
+</menu>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+<changeSet author="generator" failOnError="true" id="createRevInfoTable">
+	<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+		<not>
+			<tableExists tableName="REVINFO"/>
+		</not>
+	</preConditions>
+	<createTable tableName="REVINFO">
+		<column name="ID" type="NUMBER(10, 0)">
+		<constraints nullable="false" primaryKey="true"/>
+		</column>
+		<column name="TIMESTAMP" type="NUMBER(19, 0)">
+			<constraints nullable="false"/>
+		</column>
+		<column name="USERIDENTIFIER" type="VARCHAR2(255 CHAR)"/>
+	</createTable>
+</changeSet>
+<changeSet author="generator" failOnError="true" id="changeSetForCreateTables-byGenerator">
+    <createTable tableName="TST_Student">
+      <column autoIncrement="true" name="TST_STUDENT_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="FIRST_NAME" type="nvarchar(255)"/>
+      <column name="LAST_NAME" type="nvarchar(255)"/>
+      <column name="FK_SCHOOL" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_StringIdentifier">
+      <column name="TST_STRINGIDENTIFIER_ID" type="varchar(60)">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+    </createTable>
+  <createTable tableName="TST_BlogPost">
+      <column autoIncrement="true" name="TST_BLOGPOST_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+      <column name="CONTENT" type="nvarchar(255)"/>
+    </createTable>
+  <createTable tableName="TST_filecontainer">
+      <column autoIncrement="true" name="TST_FILECONTAINER_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="FILE_FILENAME" type="nvarchar(255)"/>
+      <column name="FILE_CONTENTTYPE" type="nvarchar(128)"/>
+      <column name="FILE_CONTENT" type="BLOB"/>
+    </createTable>
+  <createTable tableName="TST_teacher">
+      <column autoIncrement="true" name="TST_EMPLOYEE_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="GRADE" type="BIGINT"/>
+      <column name="FIRST_NAME" type="nvarchar(255)"/>
+      <column name="LAST_NAME" type="nvarchar(255)"/>
+      <column name="NATIONAL_CODE" type="BIGINT"/>
+      <column name="BIRTHDATE" type="TIMESTAMP"/>
+      <column name="GENDER" type="BIGINT"/>
+      <column name="FK_FIRM" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_Engine">
+      <column autoIncrement="true" name="TST_ENGINE_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="SERIAL_" type="nvarchar(255)"/>
+      <column name="POWER" type="BIGINT"/>
+      <column name="FK_CONTAINER" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_Company">
+      <column autoIncrement="true" name="TST_COMPANY_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+    </createTable>
+  <createTable tableName="TST_CriticInfo">
+      <column name="TST_CRITICINFO_ID" type="varchar(60)">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+      <column name="CODE_" type="nvarchar(255)"/>
+      <column name="creation_time" type="TIMESTAMP"/>
+      <column name="created_by" type="varchar(60)"/>
+      <column name="lastmodification_time" type="TIMESTAMP"/>
+      <column name="lastmodified_by" type="varchar(60)"/>
+    </createTable>
+  <createTable tableName="TST_TAG">
+      <column autoIncrement="true" name="TST_TAG_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+    </createTable>
+    <createTable tableName="TST_POST_TAG">
+      <column name="POSTID" type="BIGINT"/>
+      <column name="TAGID" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_Kitchen">
+      <column autoIncrement="true" name="TST_KITCHEN_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="AREA" type="BIGINT"/>
+      <column name="FK_HOME" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_MSG_Type">
+      <column autoIncrement="true" name="TST_MSG_TYPE_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+      <column name="ADAPTIVE_TYPE_XML" type="CLOB"/>
+    </createTable>
+  <createTable tableName="TST_HOME">
+      <column autoIncrement="true" name="TST_HOME_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="POSTAL_CODE" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_Employee">
+      <column autoIncrement="true" name="TST_EMPLOYEE_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="FIRST_NAME" type="nvarchar(255)"/>
+      <column name="LAST_NAME" type="nvarchar(255)"/>
+      <column name="NATIONAL_CODE" type="BIGINT"/>
+      <column name="BIRTHDATE" type="TIMESTAMP"/>
+      <column name="GENDER" type="nvarchar(128)"/>
+      <column name="FK_FIRM" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_MSG">
+      <column autoIncrement="true" name="TST_MSG_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="SUBJECT_" type="nvarchar(255)"/>
+      <column name="CONTENT" type="nvarchar(255)"/>
+      <column name="ADAPTIVE_DATA_XML" type="CLOB"/>
+      <column name="FK_MESSAGEFORMAT" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_CAR">
+      <column autoIncrement="true" name="TST_CAR_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="BRAND" type="nvarchar(255)"/>
+      <column name="MODEL" type="nvarchar(255)"/>
+      <column name="BODY_SERIAL" type="nvarchar(255)"/>
+      <column name="FK_THRUST" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_SCHOOL">
+      <column autoIncrement="true" name="TST_SCHOOL_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+    </createTable>
+  <createTable tableName="TST_Validations">
+      <column autoIncrement="true" name="TST_VALIDATIONS_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+      <column name="LENGTH_FIELD" type="nvarchar(255)"/>
+      <column name="EMAIL" type="nvarchar(255)"/>
+      <column name="NON_NUM_FIELD" type="nvarchar(255)"/>
+      <column name="PATTERN_FIELD" type="nvarchar(255)"/>
+      <column name="MINMAX_FILED" type="BIGINT"/>
+      <column name="DOUBLE_FIELD" type="BIGINT"/>
+    </createTable>
+  <createTable tableName="TST_TASK">
+      <column autoIncrement="true" name="TST_TASK_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="TITLE" type="nvarchar(255)"/>
+      <column name="FK_ASSIGNEDTO" type="BIGINT"/>
+    </createTable>
+  <addForeignKeyConstraint baseColumnNames="FK_SCHOOL" baseTableName="TST_Student" constraintName="CN_0c4-4953-b7ae-35aff45ab368" referencedColumnNames="TST_SCHOOL_ID" referencedTableName="TST_SCHOOL"/>
+  <addForeignKeyConstraint baseColumnNames="FK_FIRM" baseTableName="TST_teacher" constraintName="CN_2da-4c16-95c2-9921d31c169e" referencedColumnNames="TST_COMPANY_ID" referencedTableName="TST_Company"/>
+  <addForeignKeyConstraint baseColumnNames="FK_CONTAINER" baseTableName="TST_Engine" constraintName="CN_c91-44a5-8ee4-5dd583044149" referencedColumnNames="TST_CAR_ID" referencedTableName="TST_CAR"/>
+  <addForeignKeyConstraint baseColumnNames="POSTID" baseTableName="TST_POST_TAG" constraintName="CN_a48-4ca8-80f5-8adfd6659dd1" referencedColumnNames="TST_BLOGPOST_ID" referencedTableName="TST_BlogPost"/>
+    <addForeignKeyConstraint baseColumnNames="TAGID" baseTableName="TST_POST_TAG" constraintName="CN_e8d-4a73-b3a4-129d5ea2c04b" referencedColumnNames="TST_TAG_ID" referencedTableName="TST_TAG"/>
+  <addForeignKeyConstraint baseColumnNames="FK_HOME" baseTableName="TST_Kitchen" constraintName="CN_148-4696-a58e-a1662a08824d" referencedColumnNames="TST_HOME_ID" referencedTableName="TST_HOME"/>
+  <addForeignKeyConstraint baseColumnNames="FK_FIRM" baseTableName="TST_Employee" constraintName="CN_268-4884-9823-eb2ccf77d722" referencedColumnNames="TST_COMPANY_ID" referencedTableName="TST_Company"/>
+  <addForeignKeyConstraint baseColumnNames="FK_MESSAGEFORMAT" baseTableName="TST_MSG" constraintName="CN_e11-46cc-8138-bf3ea1a24de4" referencedColumnNames="TST_MSG_TYPE_ID" referencedTableName="TST_MSG_Type"/>
+  <addForeignKeyConstraint baseColumnNames="FK_THRUST" baseTableName="TST_CAR" constraintName="CN_309-442e-884d-c6e9a7dbce2e" referencedColumnNames="TST_ENGINE_ID" referencedTableName="TST_Engine"/>
+  <addForeignKeyConstraint baseColumnNames="FK_ASSIGNEDTO" baseTableName="TST_TASK" constraintName="CN_141-4893-81af-9deff8fd6d3a" referencedColumnNames="TST_EMPLOYEE_ID" referencedTableName="TST_Employee"/>
+  </changeSet>
+<changeSet author="generator" dbms="oracle, db2" failOnError="true" id="createSequence">
+	<preConditions onFail="MARK_RAN">
+		<not>
+			<sequenceExists sequenceName="HIBERNATE_SEQUENCE"/>
+		</not>
+	</preConditions>
+	<createSequence sequenceName="HIBERNATE_SEQUENCE"/>
+</changeSet>
+</databaseChangeLog>

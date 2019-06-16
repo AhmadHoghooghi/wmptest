@@ -1,0 +1,126 @@
+<div class="edit-block">
+  <div class="panel-heading background-black max-padding " data-ng-hide="actions.common.params.getParam('hideFormTitle')">
+    <h3 class="panel-title color-white">
+      <span class="glyphicon glyphicon-pencil"></span>
+      <span>{{formTitle}}</span>
+      <i class="icon-close  pull-left" data-ng-click="back()"></i>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <form id="fieldvalidationEditForm" data-ng-submit="save('')" novalidate>
+      <fieldset>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_fieldvalidation_title" class="control-label">{{message("fieldValidation_title")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_fieldvalidation_title" type="text" data-ng-model="data.title" id="edit_fieldvalidation_title" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_fieldvalidation_lengthField" class="control-label">{{message("fieldValidation_lengthField")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_fieldvalidation_lengthField" type="text" data-ng-model="data.lengthField" id="edit_fieldvalidation_lengthField" class="form-control"  minlength="5" maxlength="10"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_fieldvalidation_email" class="control-label">{{message("fieldValidation_email")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_fieldvalidation_email" type="email" data-ng-model="data.email" id="edit_fieldvalidation_email" class="form-control"  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_fieldvalidation_nonNumField" class="control-label">{{message("fieldValidation_nonNumField")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_fieldvalidation_nonNumField" type="text" data-ng-model="data.nonNumField" id="edit_fieldvalidation_nonNumField" class="form-control"  data-rule-nonnumeric="true"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_fieldvalidation_patternField" class="control-label">{{message("fieldValidation_patternField")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_fieldvalidation_patternField" type="text" data-ng-model="data.patternField" id="edit_fieldvalidation_patternField" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:auto -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_fieldvalidation_minmaxFiled" class="control-label">{{message("fieldValidation_minmaxFiled")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_fieldvalidation_minmaxFiled" type="text" data-ng-model="data.minmaxFiled" id="edit_fieldvalidation_minmaxFiled" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:auto -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_fieldvalidation_doubleField" class="control-label">{{message("fieldValidation_doubleField")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_fieldvalidation_doubleField" type="text" data-ng-model="data.doubleField" id="edit_fieldvalidation_doubleField" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+        
+        
+        
+      </fieldset>
+    </form>
+  </div>
+  <div class="panel-footer" data-ng-hide="actions.common.params.getParam('hideButtons')">
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default btn-fix-size pull-left" data-ng-click="back()">{{message('btn_back_text')}}</button>
+        <button type="button" class="btn btn-primary btn-fix-size pull-left min-margin-left" data-ng-click="save('')">{{message('btn_save_text')}}</button>
+      </div>
+    </div>
+  </div>
+</div>

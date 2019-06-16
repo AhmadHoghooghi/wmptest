@@ -1,0 +1,127 @@
+<div class="edit-block">
+  <div class="panel-heading background-black max-padding " data-ng-hide="actions.common.params.getParam('hideFormTitle')">
+    <h3 class="panel-title color-white">
+      <span class="glyphicon glyphicon-pencil"></span>
+      <span>{{formTitle}}</span>
+      <i class="icon-close  pull-left" data-ng-click="back()"></i>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <form id="employeeEditForm" data-ng-submit="save('')" novalidate>
+      <fieldset>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_employee_firstName" class="control-label">{{message("employee_firstName")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_employee_firstName" type="text" data-ng-model="data.firstName" id="edit_employee_firstName" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_employee_lastName" class="control-label">{{message("employee_lastName")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_employee_lastName" type="text" data-ng-model="data.lastName" id="edit_employee_lastName" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_employee_nationalCode" class="control-label">{{message("employee_nationalCode")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_employee_nationalCode" type="text" data-ng-model="data.nationalCode" id="edit_employee_nationalCode" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" data-ng-init="actions.common.fillDate('birthdate')"><!-- date -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_employee_birthdate" class="control-label">{{message("employee_birthdate")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <div class="input-group">
+                    <input type="text" class="form-control border-radius-right" id="edit_employee_birthdate"
+                           datepicker-popup-persian="yyyy/MM/dd" date-disabled="false" data-ng-model="data.birthdate" is-open="widget.birthdate.isOpen" data-ng-required="true"
+                           show-button-bar="false" datepicker-options="widget.birthdate.options" close-on-date-selection="true"/>
+                    <span class="input-group-addon" data-ng-click="widget.birthdate.openDate($event)">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- enum -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_employee_gender" class="control-label">{{message("employee_gender")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <select name="edit_employee_gender" id="edit_employee_gender" data-ng-options="item.pk as item.toStr for item in data.enums.gender" class="form-control" data-ng-model="data.gender">
+                    <option value="" data-ng-selected="data.gender == null">---</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- suggest -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_employee_firm" class="control-label required-input">{{message("employee_firm")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <ui-select data-ng-model="data.firm" search-enabled="true">
+                    <ui-select-match allow-clear>{{$select.selected.toStr}}</ui-select-match>
+                    <ui-select-choices repeat="item as item in widget.firm.items | filter: $select.search"
+                                       refresh="actions.common.refreshSuggest('company','firm', $select.search, 10)"
+                                       refresh-delay="0">{{item.toStr}}
+                    </ui-select-choices>
+                  </ui-select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+        
+        
+        
+      </fieldset>
+    </form>
+  </div>
+  <div class="panel-footer" data-ng-hide="actions.common.params.getParam('hideButtons')">
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default btn-fix-size pull-left" data-ng-click="back()">{{message('btn_back_text')}}</button>
+        <button type="button" class="btn btn-primary btn-fix-size pull-left min-margin-left" data-ng-click="save('')">{{message('btn_save_text')}}</button>
+      </div>
+    </div>
+  </div>
+</div>

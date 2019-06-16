@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><security-settings xmlns="http://asta.ir/core/portal/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" prefix="wmptest." xsi:schemaLocation="http://asta.ir/core/portal/security http://asta.ir/core/portal/security ">
+
+	<permission-categories>
+	</permission-categories>
+	
+	<permission-subjects>
+		<!-- 
+		<subject code="log" title="وقايع" />
+		 -->
+	</permission-subjects>	
+
+	<permissions>
+		<activity code="root" title="wmptest root"/>
+	 
+	 
+	<activity code="blogpost" parent="root" title="مدیریت پست های وبلاگ"/>
+    <activity category="datamanagement-search" code="blogpost.list" parent="blogpost" title="لیست پست های وبلاگ" viewable="true"/>
+    <activity category="datamanagement-search" code="blogpost.options" parent="blogpost" title="انتخاب پست وبلاگ" viewable="true"/>
+    <activity category="datamanagement-view" code="blogpost.view" parent="blogpost" title="مشاهده پست وبلاگ" viewable="true"/>
+    <activity category="datamanagement-create" code="blogpost.create" parent="blogpost" title="ایجاد پست وبلاگ" viewable="true"/>
+    <activity category="datamanagement-update" code="blogpost.update" parent="blogpost" title="بروزرسانی پست وبلاگ" viewable="true"/>
+    <activity category="datamanagement-delete" code="blogpost.delete" parent="blogpost" title="حذف پست وبلاگ" viewable="true"/>
+  <activity code="car" parent="root" title="مدیریت خودرو ها"/>
+    <activity category="datamanagement-search" code="car.list" parent="car" title="لیست خودرو ها" viewable="true"/>
+    <activity category="datamanagement-search" code="car.options" parent="car" title="انتخاب خودرو" viewable="true"/>
+    <activity category="datamanagement-view" code="car.view" parent="car" title="مشاهده خودرو" viewable="true"/>
+    <activity category="datamanagement-create" code="car.create" parent="car" title="ایجاد خودرو" viewable="true"/>
+    <activity category="datamanagement-update" code="car.update" parent="car" title="بروزرسانی خودرو" viewable="true"/>
+    <activity category="datamanagement-delete" code="car.delete" parent="car" title="حذف خودرو" viewable="true"/>
+  <activity code="company" parent="root" title="مدیریت شرکت ها"/>
+    <activity category="datamanagement-search" code="company.list" parent="company" title="لیست شرکت ها" viewable="true"/>
+    <activity category="datamanagement-search" code="company.options" parent="company" title="انتخاب شرکت" viewable="true"/>
+    <activity category="datamanagement-view" code="company.view" parent="company" title="مشاهده شرکت" viewable="true"/>
+    <activity category="datamanagement-create" code="company.create" parent="company" title="ایجاد شرکت" viewable="true"/>
+    <activity category="datamanagement-update" code="company.update" parent="company" title="بروزرسانی شرکت" viewable="true"/>
+    <activity category="datamanagement-delete" code="company.delete" parent="company" title="حذف شرکت" viewable="true"/>
+  <activity code="criticalinfo" parent="root" title="مدیریت داده های حیاتی"/>
+    <activity category="datamanagement-search" code="criticalinfo.list" parent="criticalinfo" title="لیست داده های حیاتی" viewable="true"/>
+    <activity category="datamanagement-search" code="criticalinfo.options" parent="criticalinfo" title="انتخاب داده حیاتی" viewable="true"/>
+    <activity category="datamanagement-view" code="criticalinfo.view" parent="criticalinfo" title="مشاهده داده حیاتی" viewable="true"/>
+    <activity category="datamanagement-create" code="criticalinfo.create" parent="criticalinfo" title="ایجاد داده حیاتی" viewable="true"/>
+    <activity category="datamanagement-update" code="criticalinfo.update" parent="criticalinfo" title="بروزرسانی داده حیاتی" viewable="true"/>
+    <activity category="datamanagement-delete" code="criticalinfo.delete" parent="criticalinfo" title="حذف داده حیاتی" viewable="true"/>
+  <activity code="employee" parent="root" title="مدیریت کارمند ها"/>
+    <activity category="datamanagement-search" code="employee.list" parent="employee" title="لیست کارمند ها" viewable="true"/>
+    <activity category="datamanagement-search" code="employee.options" parent="employee" title="انتخاب کارمند" viewable="true"/>
+    <activity category="datamanagement-view" code="employee.view" parent="employee" title="مشاهده کارمند" viewable="true"/>
+    <activity category="datamanagement-create" code="employee.create" parent="employee" title="ایجاد کارمند" viewable="true"/>
+    <activity category="datamanagement-update" code="employee.update" parent="employee" title="بروزرسانی کارمند" viewable="true"/>
+    <activity category="datamanagement-delete" code="employee.delete" parent="employee" title="حذف کارمند" viewable="true"/>
+  <activity code="engine" parent="root" title="مدیریت موتور ها"/>
+    <activity category="datamanagement-search" code="engine.list" parent="engine" title="لیست موتور ها" viewable="true"/>
+    <activity category="datamanagement-search" code="engine.options" parent="engine" title="انتخاب موتور" viewable="true"/>
+    <activity category="datamanagement-view" code="engine.view" parent="engine" title="مشاهده موتور" viewable="true"/>
+    <activity category="datamanagement-create" code="engine.create" parent="engine" title="ایجاد موتور" viewable="true"/>
+    <activity category="datamanagement-update" code="engine.update" parent="engine" title="بروزرسانی موتور" viewable="true"/>
+    <activity category="datamanagement-delete" code="engine.delete" parent="engine" title="حذف موتور" viewable="true"/>
+  <activity code="fieldvalidation" parent="root" title="مدیریت ولیدیشن ها"/>
+    <activity category="datamanagement-search" code="fieldvalidation.list" parent="fieldvalidation" title="لیست ولیدیشن ها" viewable="true"/>
+    <activity category="datamanagement-search" code="fieldvalidation.options" parent="fieldvalidation" title="انتخاب ولیدیشن" viewable="true"/>
+    <activity category="datamanagement-view" code="fieldvalidation.view" parent="fieldvalidation" title="مشاهده ولیدیشن" viewable="true"/>
+    <activity category="datamanagement-create" code="fieldvalidation.create" parent="fieldvalidation" title="ایجاد ولیدیشن" viewable="true"/>
+    <activity category="datamanagement-update" code="fieldvalidation.update" parent="fieldvalidation" title="بروزرسانی ولیدیشن" viewable="true"/>
+    <activity category="datamanagement-delete" code="fieldvalidation.delete" parent="fieldvalidation" title="حذف ولیدیشن" viewable="true"/>
+  <activity code="filecontainer" parent="root" title="مدیریت نگهدارندگان فایل"/>
+    <activity category="datamanagement-search" code="filecontainer.list" parent="filecontainer" title="لیست نگهدارندگان فایل" viewable="true"/>
+    <activity category="datamanagement-search" code="filecontainer.options" parent="filecontainer" title="انتخاب نگهدارنده فایل" viewable="true"/>
+    <activity category="datamanagement-view" code="filecontainer.view" parent="filecontainer" title="مشاهده نگهدارنده فایل" viewable="true"/>
+    <activity category="datamanagement-create" code="filecontainer.create" parent="filecontainer" title="ایجاد نگهدارنده فایل" viewable="true"/>
+    <activity category="datamanagement-update" code="filecontainer.update" parent="filecontainer" title="بروزرسانی نگهدارنده فایل" viewable="true"/>
+    <activity category="datamanagement-delete" code="filecontainer.delete" parent="filecontainer" title="حذف نگهدارنده فایل" viewable="true"/>
+  <activity code="home" parent="root" title="مدیریت خانه ها"/>
+    <activity category="datamanagement-search" code="home.list" parent="home" title="لیست خانه ها" viewable="true"/>
+    <activity category="datamanagement-search" code="home.options" parent="home" title="انتخاب خانه" viewable="true"/>
+    <activity category="datamanagement-view" code="home.view" parent="home" title="مشاهده خانه" viewable="true"/>
+    <activity category="datamanagement-create" code="home.create" parent="home" title="ایجاد خانه" viewable="true"/>
+    <activity category="datamanagement-update" code="home.update" parent="home" title="بروزرسانی خانه" viewable="true"/>
+    <activity category="datamanagement-delete" code="home.delete" parent="home" title="حذف خانه" viewable="true"/>
+  <activity code="kitchen" parent="root" title="مدیریت آشپزخانه ها"/>
+    <activity category="datamanagement-search" code="kitchen.list" parent="kitchen" title="لیست آشپزخانه ها" viewable="true"/>
+    <activity category="datamanagement-search" code="kitchen.options" parent="kitchen" title="انتخاب آشپزخانه" viewable="true"/>
+    <activity category="datamanagement-view" code="kitchen.view" parent="kitchen" title="مشاهده آشپزخانه" viewable="true"/>
+    <activity category="datamanagement-create" code="kitchen.create" parent="kitchen" title="ایجاد آشپزخانه" viewable="true"/>
+    <activity category="datamanagement-update" code="kitchen.update" parent="kitchen" title="بروزرسانی آشپزخانه" viewable="true"/>
+    <activity category="datamanagement-delete" code="kitchen.delete" parent="kitchen" title="حذف آشپزخانه" viewable="true"/>
+  <activity code="message" parent="root" title="مدیریت پیام ها"/>
+    <activity category="datamanagement-search" code="message.list" parent="message" title="لیست پیام ها" viewable="true"/>
+    <activity category="datamanagement-search" code="message.options" parent="message" title="انتخاب پیام" viewable="true"/>
+    <activity category="datamanagement-view" code="message.view" parent="message" title="مشاهده پیام" viewable="true"/>
+    <activity category="datamanagement-create" code="message.create" parent="message" title="ایجاد پیام" viewable="true"/>
+    <activity category="datamanagement-update" code="message.update" parent="message" title="بروزرسانی پیام" viewable="true"/>
+    <activity category="datamanagement-delete" code="message.delete" parent="message" title="حذف پیام" viewable="true"/>
+  <activity code="messagetype" parent="root" title="مدیریت انوع پیام"/>
+    <activity category="datamanagement-search" code="messagetype.list" parent="messagetype" title="لیست انوع پیام" viewable="true"/>
+    <activity category="datamanagement-search" code="messagetype.options" parent="messagetype" title="انتخاب نوع پیام" viewable="true"/>
+    <activity category="datamanagement-view" code="messagetype.view" parent="messagetype" title="مشاهده نوع پیام" viewable="true"/>
+    <activity category="datamanagement-create" code="messagetype.create" parent="messagetype" title="ایجاد نوع پیام" viewable="true"/>
+    <activity category="datamanagement-update" code="messagetype.update" parent="messagetype" title="بروزرسانی نوع پیام" viewable="true"/>
+    <activity category="datamanagement-delete" code="messagetype.delete" parent="messagetype" title="حذف نوع پیام" viewable="true"/>
+  <activity code="school" parent="root" title="مدیریت مدارس"/>
+    <activity category="datamanagement-search" code="school.list" parent="school" title="لیست مدارس" viewable="true"/>
+    <activity category="datamanagement-search" code="school.options" parent="school" title="انتخاب مدرسه" viewable="true"/>
+    <activity category="datamanagement-view" code="school.view" parent="school" title="مشاهده مدرسه" viewable="true"/>
+    <activity category="datamanagement-create" code="school.create" parent="school" title="ایجاد مدرسه" viewable="true"/>
+    <activity category="datamanagement-update" code="school.update" parent="school" title="بروزرسانی مدرسه" viewable="true"/>
+    <activity category="datamanagement-delete" code="school.delete" parent="school" title="حذف مدرسه" viewable="true"/>
+  <activity code="stringidentifier" parent="root" title="مدیریت موجودیت ها با id رشته ای"/>
+    <activity category="datamanagement-search" code="stringidentifier.list" parent="stringidentifier" title="لیست موجودیت ها با id رشته ای" viewable="true"/>
+    <activity category="datamanagement-search" code="stringidentifier.options" parent="stringidentifier" title="انتخاب موجودیت با id رشته ای" viewable="true"/>
+    <activity category="datamanagement-view" code="stringidentifier.view" parent="stringidentifier" title="مشاهده موجودیت با id رشته ای" viewable="true"/>
+    <activity category="datamanagement-create" code="stringidentifier.create" parent="stringidentifier" title="ایجاد موجودیت با id رشته ای" viewable="true"/>
+    <activity category="datamanagement-update" code="stringidentifier.update" parent="stringidentifier" title="بروزرسانی موجودیت با id رشته ای" viewable="true"/>
+    <activity category="datamanagement-delete" code="stringidentifier.delete" parent="stringidentifier" title="حذف موجودیت با id رشته ای" viewable="true"/>
+  <activity code="student" parent="root" title="مدیریت دانش آموزان"/>
+    <activity category="datamanagement-search" code="student.list" parent="student" title="لیست دانش آموزان" viewable="true"/>
+    <activity category="datamanagement-search" code="student.options" parent="student" title="انتخاب دانش آموز" viewable="true"/>
+    <activity category="datamanagement-view" code="student.view" parent="student" title="مشاهده دانش آموز" viewable="true"/>
+    <activity category="datamanagement-create" code="student.create" parent="student" title="ایجاد دانش آموز" viewable="true"/>
+    <activity category="datamanagement-update" code="student.update" parent="student" title="بروزرسانی دانش آموز" viewable="true"/>
+    <activity category="datamanagement-delete" code="student.delete" parent="student" title="حذف دانش آموز" viewable="true"/>
+  <activity code="tag" parent="root" title="مدیریت تگ ها"/>
+    <activity category="datamanagement-search" code="tag.list" parent="tag" title="لیست تگ ها" viewable="true"/>
+    <activity category="datamanagement-search" code="tag.options" parent="tag" title="انتخاب تگ" viewable="true"/>
+    <activity category="datamanagement-view" code="tag.view" parent="tag" title="مشاهده تگ" viewable="true"/>
+    <activity category="datamanagement-create" code="tag.create" parent="tag" title="ایجاد تگ" viewable="true"/>
+    <activity category="datamanagement-update" code="tag.update" parent="tag" title="بروزرسانی تگ" viewable="true"/>
+    <activity category="datamanagement-delete" code="tag.delete" parent="tag" title="حذف تگ" viewable="true"/>
+  <activity code="task" parent="root" title="مدیریت تسک ها"/>
+    <activity category="datamanagement-search" code="task.list" parent="task" title="لیست تسک ها" viewable="true"/>
+    <activity category="datamanagement-search" code="task.options" parent="task" title="انتخاب تسک" viewable="true"/>
+    <activity category="datamanagement-view" code="task.view" parent="task" title="مشاهده تسک" viewable="true"/>
+    <activity category="datamanagement-create" code="task.create" parent="task" title="ایجاد تسک" viewable="true"/>
+    <activity category="datamanagement-update" code="task.update" parent="task" title="بروزرسانی تسک" viewable="true"/>
+    <activity category="datamanagement-delete" code="task.delete" parent="task" title="حذف تسک" viewable="true"/>
+  <activity code="teacher" parent="root" title="مدیریت معلم ها"/>
+    <activity category="datamanagement-search" code="teacher.list" parent="teacher" title="لیست معلم ها" viewable="true"/>
+    <activity category="datamanagement-search" code="teacher.options" parent="teacher" title="انتخاب معلم" viewable="true"/>
+    <activity category="datamanagement-view" code="teacher.view" parent="teacher" title="مشاهده معلم" viewable="true"/>
+    <activity category="datamanagement-create" code="teacher.create" parent="teacher" title="ایجاد معلم" viewable="true"/>
+    <activity category="datamanagement-update" code="teacher.update" parent="teacher" title="بروزرسانی معلم" viewable="true"/>
+    <activity category="datamanagement-delete" code="teacher.delete" parent="teacher" title="حذف معلم" viewable="true"/>
+  </permissions>
+	
+	<roles>
+		<!-- 
+		<role code="ROLE_NEW"   title="نقش جدید" directAssignToUser="true" role-permissions="wmptest.root" />
+		 -->
+	</roles>
+
+	<superusers>
+	<!-- 
+		<superuser username="root" password="root" first-name="مدير"
+			last-name="سيستم پورتال" 
+			user-roles="ROLE_ADMIN,ROLE_NEW" enabled="true" />
+	 -->
+	</superusers>
+
+</security-settings>

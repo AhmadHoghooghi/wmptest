@@ -1,0 +1,76 @@
+<div class="edit-block">
+  <div class="panel-heading background-black max-padding " data-ng-hide="actions.common.params.getParam('hideFormTitle')">
+    <h3 class="panel-title color-white">
+      <span class="glyphicon glyphicon-pencil"></span>
+      <span>{{formTitle}}</span>
+      <i class="icon-close  pull-left" data-ng-click="back()"></i>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <form id="blogpostEditForm" data-ng-submit="save('')" novalidate>
+      <fieldset>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_blogpost_title" class="control-label">{{message("blogPost_title")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_blogpost_title" type="text" data-ng-model="data.title" id="edit_blogpost_title" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_blogpost_content" class="control-label">{{message("blogPost_content")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_blogpost_content" type="text" data-ng-model="data.content" id="edit_blogpost_content" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- Many to Many combo/suggest -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_blogpost_label" class="control-label">{{message("blogPost_label")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12" data-ng-init="data.label = data.label || []">
+                  <ui-select data-ng-model="data.label" search-enabled="true" multiple>
+                    <ui-select-match>{{$item.toStr}}</ui-select-match>
+                    <ui-select-choices refresh="actions.common.refreshSuggest('tag','label', $select.search, 10)"
+                                       repeat="item as item in widget.label.items | filter: $select.search" refresh-delay="0">
+                      {{item.toStr}}
+                    </ui-select-choices>
+                  </ui-select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+        
+        
+        
+      </fieldset>
+    </form>
+  </div>
+  <div class="panel-footer" data-ng-hide="actions.common.params.getParam('hideButtons')">
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default btn-fix-size pull-left" data-ng-click="back()">{{message('btn_back_text')}}</button>
+        <button type="button" class="btn btn-primary btn-fix-size pull-left min-margin-left" data-ng-click="save('')">{{message('btn_save_text')}}</button>
+      </div>
+    </div>
+  </div>
+</div>

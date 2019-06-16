@@ -1,0 +1,77 @@
+<div class="edit-block">
+  <div class="panel-heading background-black max-padding " data-ng-hide="actions.common.params.getParam('hideFormTitle')">
+    <h3 class="panel-title color-white">
+      <span class="glyphicon glyphicon-pencil"></span>
+      <span>{{formTitle}}</span>
+      <i class="icon-close  pull-left" data-ng-click="back()"></i>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <form id="messageEditForm" data-ng-submit="save('')" novalidate>
+      <fieldset>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_message_subject" class="control-label">{{message("message_subject")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_message_subject" type="text" data-ng-model="data.subject" id="edit_message_subject" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_message_content" class="control-label">{{message("message_content")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_message_content" type="text" data-ng-model="data.content" id="edit_message_content" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+        <div class="row"><!-- combo -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_message_messageFormat" class="control-label required-input">{{message("message_messageFormat")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <select name="edit_message_messageFormat" id="edit_message_messageFormat" data-ng-options="item.pk as item.toStr for item in data.options.messageFormat.items" class="form-control" data-ng-model="data.messageFormat.pk" data-ng-change="data.adaptiveDataModel={}"
+                  	required>
+                    <option value="" data-ng-selected="data.messageFormat.pk == null">---</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <adaptive-widget data-ng-model="data.adaptiveDataModel" adaptive-name="messageType"
+                         adaptive-id="data.messageFormat.pk" type="EDIT">
+        </adaptive-widget>
+        
+        
+        
+      </fieldset>
+    </form>
+  </div>
+  <div class="panel-footer" data-ng-hide="actions.common.params.getParam('hideButtons')">
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default btn-fix-size pull-left" data-ng-click="back()">{{message('btn_back_text')}}</button>
+        <button type="button" class="btn btn-primary btn-fix-size pull-left min-margin-left" data-ng-click="save('')">{{message('btn_save_text')}}</button>
+      </div>
+    </div>
+  </div>
+</div>

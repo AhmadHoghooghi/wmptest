@@ -1,0 +1,86 @@
+<div class="edit-block">
+  <div class="panel-heading background-black max-padding " data-ng-hide="actions.common.params.getParam('hideFormTitle')">
+    <h3 class="panel-title color-white">
+      <span class="glyphicon glyphicon-pencil"></span>
+      <span>{{formTitle}}</span>
+      <i class="icon-close  pull-left" data-ng-click="back()"></i>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <form id="carEditForm" data-ng-submit="save('')" novalidate>
+      <fieldset>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_car_brand" class="control-label">{{message("car_brand")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_car_brand" type="text" data-ng-model="data.brand" id="edit_car_brand" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_car_model" class="control-label">{{message("car_model")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_car_model" type="text" data-ng-model="data.model" id="edit_car_model" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- other:text -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_car_bodySerial" class="control-label">{{message("car_bodySerial")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <input name="edit_car_bodySerial" type="text" data-ng-model="data.bodySerial" id="edit_car_bodySerial" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><!-- combo -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-2 col-xs-12 no-padding">
+                  <label for="edit_car_thrust" class="control-label">{{message("car_thrust")}}</label>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                  <select name="edit_car_thrust" id="edit_car_thrust" data-ng-options="item.pk as item.toStr for item in data.options.thrust.items" class="form-control" data-ng-model="data.thrust.pk" >
+                    <option value="" data-ng-selected="data.thrust.pk == null">---</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+        
+        
+        
+      </fieldset>
+    </form>
+  </div>
+  <div class="panel-footer" data-ng-hide="actions.common.params.getParam('hideButtons')">
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default btn-fix-size pull-left" data-ng-click="back()">{{message('btn_back_text')}}</button>
+        <button type="button" class="btn btn-primary btn-fix-size pull-left min-margin-left" data-ng-click="save('')">{{message('btn_save_text')}}</button>
+      </div>
+    </div>
+  </div>
+</div>
